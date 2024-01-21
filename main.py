@@ -11,7 +11,7 @@ links = soup.find_all('div', class_ ="px-6 mt-auto flex items-center justify-bet
 
 for card in cards:
     ai_name = card.p.text
-    button_link = link.span.text
+    button_link = card.span.text
 
     #find name
     print("AI Tools Name: ", ai_name)
