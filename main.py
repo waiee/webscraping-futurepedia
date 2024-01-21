@@ -11,4 +11,4 @@ soup = BeautifulSoup(html_text, 'lxml')
 cards = soup.find_all('div', class_="flex flex-col items-start")
 
 for card in cards:
-    print(card.p.text)
+    print("AI Tools Name: ", card.p.text)
