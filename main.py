@@ -11,14 +11,17 @@ cards = soup.find_all('div', class_='flex flex-col items-start')
 links = soup.find_all('div', class_='px-6 mt-auto flex items-center justify-between pb-4')
 
 #find all desc
-descs = soup.find_all('div', class_="px-6")
+descs = soup.find_all('div', class_="flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg")
 
 # Extract and print AI tools name and link
 for card, link, desc in zip(cards, links, descs):
     ai_name = card.p.text
     button_link = link.span.text.strip()
     ai_link = link.find('a')['href']
-    ai_desc = desc.p.text
+    
+    # Extract text from the second <p> tag within the desc div
+    second_p = desc.find_all('p')[1] if len(desc.find_all('p')) > 1 else None
+    ai_desc = second_p.text if second_p else 'No second <p> tag available'
 
     if button_link == "Get Deal":
         print("AI Tools Name: ", ai_name)
