@@ -1,25 +1,25 @@
-from bs4 import BeautifulSoup 
+from bs4 import BeautifulSoup
 import requests
 
-#get html text
-html_text =  requests.get('https://www.futurepedia.io').text
-#define soup
-soup = BeautifulSoup(html_text, 'lxml')
-#find all by cards
-cards = soup.find_all('div', class_="flex flex-col items-start")
-links = soup.find_all('div', class_ ="px-6 mt-auto flex items-center justify-between pb-4")
+html_text = requests.get('https://www.futurepedia.io').text
+soup = BeautifulSoup(html_text, 'html.parser')
 
-#find name
-for card in cards:
+# Find all cards
+cards = soup.find_all('div', class_='flex flex-col items-start')
+
+# Find all links
+links = soup.find_all('div', class_='px-6 mt-auto flex items-center justify-between pb-4')
+
+# Extract and print AI tools name and link
+for card, link in zip(cards, links):
     ai_name = card.p.text
-    print("AI Tools Name: ", ai_name)
-
-#find button link
-for link in links:
-    button_link = link.span.text
-    ai_link = link.get('href')
+    button_link = link.span.text.strip()
+    ai_link = link.find('a')['href']
 
     if button_link == "Get Deal":
-            print("Get Deal: ", ai_link)
+        print("AI Tools Name: ", ai_name)
+        print("Get Deal: ", ai_link)
     else:
+        print("AI Tools Name: ", ai_name)
         print("Visit Website: ", ai_link)
+
