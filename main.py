@@ -8,5 +8,4 @@ html_text =  requests.get('https://www.futurepedia.io').text
 soup = BeautifulSoup(html_text, 'lxml')
 
 #find all by tag
-tags = soup.find_all('h5')
-print(tags)
+tags = soup.find_all('div', class_='flex flex-col bg-card text-card-foreground h-full w-full rounded-xl border shadow-lg')
