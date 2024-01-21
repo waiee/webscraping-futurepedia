@@ -9,6 +9,10 @@ soup = BeautifulSoup(html_text, 'lxml')
 cards = soup.find_all('div', class_="flex flex-col items-start")
 links = soup.find_all('div', class_ ="px-6 mt-auto flex items-center justify-between pb-4")
 
-for card,link in cards:
+for card in cards:
     ai_name = card.p.text
     print("AI Tools Name: ", ai_name)
+
+for link in links:
+    ai_link = link.span.text
+    print("Link: ", ai_link)
