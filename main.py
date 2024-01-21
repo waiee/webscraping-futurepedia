@@ -15,4 +15,7 @@ for card in cards:
 
 for link in links:
     ai_link = link.span.text
-    print("Link: ", ai_link)
+    if ai_link == "Get Deal":
+        print("Get Deal: ", ai_link)
+    else:
+        print("Visit: ", ai_link)
