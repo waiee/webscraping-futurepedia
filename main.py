@@ -17,7 +17,7 @@ for card in cards:
 #find button link
 for link in links:
     button_link = link.span.text
-    ai_link = link.a.href
+    ai_link = link.get('href')
 
     if button_link == "Get Deal":
             print("Get Deal: ", ai_link)
