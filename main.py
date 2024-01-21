@@ -10,12 +10,15 @@ cards = soup.find_all('div', class_="flex flex-col items-start")
 links = soup.find_all('div', class_ ="px-6 mt-auto flex items-center justify-between pb-4")
 
 for card in cards:
+    #find name
     ai_name = card.p.text
     print("AI Tools Name: ", ai_name)
 
-for link in links:
-    ai_link = link.span.text
-    if ai_link == "Get Deal":
-        print("Get Deal: ", ai_link)
-    else:
-        print("Visit: ", ai_link)
+    #find link
+    for link in links:
+        button_link = link.span.text
+
+        if button_link == "Get Deal":
+            print("Get Deal: ", button_link)
+        else:
+            print("Visit Website: ", button_link)
