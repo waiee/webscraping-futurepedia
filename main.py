@@ -7,7 +7,8 @@ html_text =  requests.get('https://www.futurepedia.io').text
 soup = BeautifulSoup(html_text, 'lxml')
 #find all by cards
 cards = soup.find_all('div', class_="flex flex-col items-start")
+links = soup.find_all('div', class_ ="px-6 mt-auto flex items-center justify-between pb-4")
 
-for card in cards:
+for card,link in cards:
     ai_name = card.p.text
     print("AI Tools Name: ", ai_name)
