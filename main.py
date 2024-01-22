@@ -31,5 +31,6 @@ for card, link, desc in zip(cards, links, descs):
         print("Description: ", ai_desc )
     print(" ")
 
-    #test test terlalu busy sampai tak dapat continue
+#test test terlalu busy sampai tak dapat continue
+#hmmmmm
 
