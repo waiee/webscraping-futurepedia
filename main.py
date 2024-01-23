@@ -34,5 +34,5 @@ for card, link, desc in zip(cards, links, descs):
 #test test terlalu busy sampai tak dapat continue
 #hmmmmm
 #masih terlalu busy
-
+#hari kedua pisang
 
