@@ -36,4 +36,5 @@ for card, link, desc in zip(cards, links, descs):
 #masih terlalu busy
 #hari kedua pisang
 #hari ketiga
+# masih pishang siapkan assignment
 
