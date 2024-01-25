@@ -39,3 +39,4 @@ for card, link, desc in zip(cards, links, descs):
 #masih pishang siapkan assignment
 #macam biasa
 #yes, macam biasa
+#another day, another busy day tibeh
