@@ -30,13 +30,3 @@ for card, link, desc in zip(cards, links, descs):
         print("Visit Website: ", ai_link)
         print("Description: ", ai_desc )
     print(" ")
-
-#test test terlalu busy sampai tak dapat continue
-#hmmmmm
-#masih terlalu busy
-#hari kedua pisang
-#hari ketiga
-#masih pishang siapkan assignment
-#macam biasa
-#yes, macam biasa
-#another day, another busy day tibeh
