@@ -30,3 +30,5 @@ for card, link, desc in zip(cards, links, descs):
         print("Visit Website: ", ai_link)
         print("Description: ", ai_desc )
     print(" ")
+
+#cam biasa.
