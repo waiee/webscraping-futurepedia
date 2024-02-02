@@ -31,6 +31,7 @@ for card, link, desc in zip(cards, links, descs):
         print("Description: ", ai_desc )
     print(" ")
 
+#hmmmm
 #cam biasa.
 #well
 #like always
