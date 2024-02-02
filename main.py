@@ -33,3 +33,4 @@ for card, link, desc in zip(cards, links, descs):
 
 #cam biasa.
 #well
+#like always
